@@ -2,7 +2,7 @@
 
 // Получение данных от клиента
 
- if(isset($_POST)){
+ if(isset($_POST['station'])){
 
   require_once('PHPExcel.php');
   require_once('PHPExcel/IOFactory.php');
