@@ -1,0 +1,48 @@
+<!DOCTYPE html>     
+<html>     
+ <head>     
+  <meta charset="utf-8">     
+  	<title>Калькулятор</title>     
+
+	  <link href="css/default.css" rel="stylesheet">    
+    <link href="css/sweetalert.css" rel="stylesheet"> 
+
+	  <script src="js/jquery.js"></script>     
+	  <script src="js/raphael-min.js"></script>     
+	  <script src="js/paths.js"></script>     
+	  <script src="js/init.js"></script>   
+	  <script src="js/freshslider.min.js"></script>
+    <script src="js/canvasjs.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>  
+
+ </head>  
+
+<body>
+
+<div id="common">
+  <div id="screenLayerDiv"></div>
+
+  <div>
+    Наша компания предлагает комплекс услуг по разработке индивидуальных инженерных решений и проектов строительства солнечных фотоэлектрических систем электроснабжения, также поставки оборудования, пуско-наладки и сервисного обслуживания.
+  </div>
+
+  <div class="divTop">
+    <div class="divInt">Область для расчёта <input id="oblast" type="text" readonly=""/></div>
+    <div class="divInt">
+     <div class="select">
+      <span class="placeholder" id="ph_station">Зелёный тариф</span>
+      <ul>
+        <li data-value="value">Автономная станция</li>
+      </ul>
+      <input type="hidden" id="station" value="Зелёный тариф"/>
+    </div>
+    </div>
+  </div>  
+
+<div id="map"></div> 
+<div id="calculatorDiv"></div>
+<div id="userEmail"></div>
+
+</body>     
+ 
+</html>
