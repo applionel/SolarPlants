@@ -1,0 +1,624 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+
+#common{	
+	width: 800px;
+
+	padding: 15px;
+    /*
+	background: rgba(255,255,255,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(100%, rgba(229,239,251,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5effb', GradientType=1 );
+	    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	       -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	*/
+	font-family: Tahoma, Geneva, Kalimati, sans-serif;line-height: 1.5;
+	font-size: 12px;
+
+}
+
+#common input, div, table, tr, a {
+	font-family: Tahoma, Geneva, Kalimati, sans-serif;
+	line-height: 1.5;
+	font-size: 12px;
+}
+
+/* Карта Украины */
+#map {
+  float:left;
+  clear:both;
+  width: 49.5%;
+  height: 280px;	
+}
+
+.point {
+  position:absolute;
+  display:none;
+  padding:10px 15px;
+  background:#363636;
+  color: #fff;
+  opacity: 0.8;
+
+  /* скруглённые уголки */
+  -moz-border-radius:8px;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+}
+     
+/************************************************* Поле "Укажите область на карте:" *************************************************/
+
+#oblast {
+	display: inline-block;
+	width: 140px;
+	margin-left: 3px;
+	line-height: 18px;
+	text-indent: 5px;
+ 	border: solid 1px #186f8f;
+  	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+}
+
+.divTop{
+	width: 100%;
+	padding-top: 15px;
+	text-align: left;
+}
+.divInt{
+	width: 49.5%;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+}
+.divMiddle{
+	width: 46%;
+	height: 332px;
+	display: inline-block; 
+	margin: 5px 0px 0px 6px;
+	border: 1px solid;
+	padding: 10px;
+	border-spacing: 1px 1px;
+	border-radius: 3px;
+}
+
+#divBot{
+	width: 65%;
+}
+
+#dataTable input{
+	width: 45px;
+	border:none;
+	border-bottom: 1px solid;
+	text-align: center;
+
+	border: solid 1px #006400;
+  	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+}
+
+#dataTable,#dataTableTop {
+	width: 100%;
+	display: block;
+}
+
+#dataTable {	
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	overflow: hidden;
+    overflow-y: auto;
+    height: 227px;
+}
+
+
+#dataTableTop tr:nth-child(1){
+	text-align: center;
+	line-height: 25px;
+	font-weight: bold;
+	background-color: #4682B4;
+}
+#dataTableTop tr:nth-child(2){
+	line-height: 15px;
+	text-align: center;
+	background-color: #B0C4DE;
+}
+
+#dataTable td, #dataTableTop td{
+	border-radius: 2px;
+}
+
+#dataTableTop td:nth-child(1),#dataTableTop td:nth-last-child(1){
+	width: 20px;
+	background-color: #4682B4;
+}
+#dataTable td:nth-child(1){
+	text-align: right;
+	width: 50px;
+}
+#dataTableTop td:nth-child(2){
+	text-align: center;
+	width: 18px;
+}
+#dataTable td:nth-child(2), #dataTableTop td:nth-child(3){
+	width: 160px;
+	text-indent: 5px;
+	background-color: #FFC125;
+}
+#dataTable td:nth-child(3),td:nth-child(4),td:nth-child(5),
+#dataTableTop td:nth-child(4),td:nth-child(5), td:nth-child(6){
+	width: 60px;
+	text-align: center;
+}
+
+#addParamTable{
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	margin-bottom: 5px;
+	width: 45%;
+	margin-top: -67px;
+}
+
+#calcTable{
+	display: inline-block;
+	position: relative;
+	padding: 15px 10px 15px 15px;
+	border:1px solid;
+	border-spacing: 1px 1px;
+	border-radius: 3px;
+	width: 74%;
+	margin: 10px 0px 0px 5px;
+	margin-left: 13%;
+
+}
+#calcTable tr:nth-child(1){
+	text-align: center;
+	line-height: 25px;
+	font-weight: bold;
+	background-color: #4682B4;
+}
+#calcTable td:nth-child(1){
+	text-align: center;
+}
+#calcTable td:nth-child(2){
+	width: 100%;
+	padding-left: 5px;
+	background-color: #B0C4DE;
+}
+#calcTable td:nth-child(3){
+	text-align: right;
+	width: 30px;
+}
+#calcTable td:nth-child(4){
+	text-align: left;
+}
+
+
+#calcTable input{
+	border: none;
+	border-bottom: 1px solid;
+	margin-left: 5px;
+	margin-right: 5px;
+	width: 30px;
+	text-align: center;
+}
+
+#totalCapacity{
+	margin-top: 5px;
+	margin-left: 3px;
+	line-height: 18px;
+	width: 50px;
+	border: solid 1px #186f8f;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	text-align: right;
+	padding-right: 5px;
+}
+
+/* Кнопка расчёта формы */
+.a_demo_one {
+	margin: 4px 5px 0px 0px;
+	line-height: 30px;
+	text-align: center;
+	padding: 1px 15px 1px 15px;
+	background-color:#3bb3e0;
+	float: right;
+	position:relative;
+	text-decoration:none;
+	color:#fff;
+	border: solid 1px #186f8f;
+	background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(44,160,202)),
+	color-stop(1, rgb(62,184,229))
+	);
+	-webkit-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 0px #7fd2f1, 0px 1px 0px #fff;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.a_demo_one::before {
+	background-color:#ccd0d5;
+	content:"";
+	display:block;
+	position:absolute;
+	z-index:-1;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+}
+
+.a_demo_one:active {
+	background-image: linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(62,184,229) 0%, rgb(44,160,202) 100%);
+	background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(62,184,229)),
+	color-stop(1, rgb(44,160,202))
+	);
+}
+
+/* SelectBox */
+.select,.autoselect,.autoselect1 {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #cccccc;
+  vertical-align: middle;
+  text-align: left;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+}
+.select .placeholder,.autoselect .placeholder,.autoselect1 .placeholder {
+  position: relative;
+  display: block;
+  background-color: #FFC125;
+  color: #000;
+  z-index: 1;
+  padding: 5px 10px 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.select .placeholder:hover,.autoselect .placeholder:hover,.autoselect1 .placeholder:hover {
+  background: #34383c;
+  color: #fff;
+}
+.select .placeholder:after,.autoselect .placeholder:after,.autoselect1 .placeholder:after {
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: 'FontAwesome';
+  content: '\f078';
+  z-index: 10;
+}
+.select.is-open  .placeholder:after,.autoselect.is-open .placeholder:after,.autoselect1.is-open .placeholder:after {
+  content: '\f077';
+}
+.select.is-open ul,.autoselect.is-open ul,.autoselect1.is-open ul {
+  display: block;
+  width: 50%;
+  margin-left: 10px;
+}
+.select ul,.autoselect ul,.autoselect1 ul {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  margin: 5px 0 0 0;
+  padding: 0;
+  z-index: 100;
+}
+.select ul li,.autoselect ul li,.autoselect1 ul li {
+  display: block;
+  text-align: left;
+  padding: 5px 10px 5px 10px;
+  color: #999;
+  cursor: pointer;
+}
+.select ul li:hover,.autoselect ul li:hover,.autoselect1 ul li:hover {
+  background: #4ebbf0;
+  color: #fff;
+}
+
+
+/****** GREEN ****** ****** GREEN ****** ****** GREEN ****** ****** GREEN ****** ****** GREEN ****** ****** GREEN ****** ****** GREEN ****** ****** GREEN ****** ****** GREEN ******/
+
+#greenMainParams{
+	display: inline-block;
+	width: 49.5%;
+	margin: 5px 0px 0px 5px;
+}
+
+#greenTableParam{
+	padding: 5px 0px 5px 0px;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	width: 100%;
+}
+
+#greenTableParam td{
+	padding-left: 10px;
+}
+
+/*************************************************  Слайдер для мощности и угла наклона *************************************************/
+.fsslider{
+	position:relative;
+	min-width:100px;
+	height:18px;
+	display:inline-block;
+	width:100%;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	color:#000;
+	text-align:center;
+	line-height:18px;
+}
+
+.fsslider>*{
+	position:absolute;
+	top:50%;
+	cursor:pointer
+}
+
+.fsslider>.fsfull-value,.fsslider>.fssel-value{
+	margin-top:-2px;
+	height:3px;
+	left:0;
+	right:0;
+}
+.fsslider>.fsfull-value{
+	width:100%;
+	background:#458B00; /* правый блок от блока со значением */
+}
+
+.fsslider>.fscaret,.fsslider>.fssel-left,.fsslider>.fssel-right{
+	background:#fff; /*блок слайдера со значением */
+	border-radius: 15px;
+	box-shadow:1px 1px 3px rgba(0,0,0,.2);
+	-moz-box-shadow:1px 1px 3px rgba(0,0,0,.2);
+	-webkit-box-shadow:1px 1px 3px rgba(0,0,0,.2);
+	height:100%;
+	min-width:30px;
+	top:0;
+	padding-left:5px;
+	padding-right:5px;
+	border: solid 1px #FF0000;
+}
+
+.fsslider>.fssel-value{
+	background:	#1E90FF; /* левый блок от блока со значением */
+	height:3px;
+	margin-top:-2px;
+	right:50%
+}
+
+.fsslider.fsdisabled{
+	color:#c8c8c8
+}
+
+.fsslider.fsdisabled>.fssel-value{
+	background:#c8c8c8
+}
+
+#powerSlider, #angleSlider{
+	width: 150px;
+	display: inline-block;
+	line-height: 30px;
+}
+
+#greenChartDiv{
+	width: 49%;
+	float: right;
+	height: 190px;
+	margin: 5px;
+}
+
+#greenCalcValues{
+	width: 100%;
+	float: left;
+}
+
+#greenTableCalc{
+	width: 100%;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#greenTableCalc input{
+	display: inline-block;
+	text-indent: 5px;
+	width: 50px;
+	border: solid 1px #186f8f;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-moz-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	-o-box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+	box-shadow: inset 0px 1px 1px #909193, 0px 1px 0px #fff;
+}
+
+/* Обмен данными с сервером */
+
+#userEmail{
+	top: 50%; 				/* Отступ в процентах от верхнего края окна */
+	left: 50%; 				/* Отступ в процентах от левого края окна */
+	width: 200px; 			/* Ширина блока */
+	height: 65px; 			/* Высота блока */
+	position: absolute; 	/* Абсолютное позиционирование блока */
+	margin-top: -95px; 		/* Отрицательный отступ от верхнего края страницы, должен равняться половине высоты блока со знаком минус */
+	margin-left: -100px; 	/* Отрицательный отступ от левого края страницы, должен равняться половине ширины блока со знаком минус */
+	z-index: 999;
+
+	border: 1px solid;
+	line-height: 35px;
+	padding: 15px 10px 10px 10px;
+
+	background: rgba(255,255,255,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(255,255,255,1)), color-stop(100%, rgba(229,239,251,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 47%, rgba(229,239,251,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5effb', GradientType=1 );
+	    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	    -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	       -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	            box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+
+	text-align: center;
+	font-size: 13px;
+}
+
+#screenLayerDiv{
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 998;
+	background-image: -ms-linear-gradient(top, #FCFDFF 0%, #D9D9D9 100%);
+	background-image: -moz-linear-gradient(top, #FCFDFF 0%, #D9D9D9 100%);
+	background-image: -o-linear-gradient(top, #FCFDFF 0%, #D9D9D9 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FCFDFF), color-stop(100, #D9D9D9));
+	background-image: -webkit-linear-gradient(top, #FCFDFF 0%, #D9D9D9 100%);
+	background-image: linear-gradient(to bottom, #FCFDFF 0%, #D9D9D9 100%);
+}
+
+#userEmailField{
+	display: inline-block;
+	border: 1px solid;
+	border-radius: 5px;
+	width: 150px;
+	text-indent: 5px;
+}
+
+.buttonHolder{
+  width:40px;
+  display: inline-block;
+}
+
+.button{
+			display: inline-block;
+			background-image: -webkit-linear-gradient(top, 	#63B8FF, #104E8B);
+			background-image: linear-gradient(top, 	#63B8FF, #104E8B);
+			border-radius: 50%;
+			box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+
+			height: 25px;
+			position: relative;
+			width: 25px;			
+			-webkit-transition: all .1s linear;
+			transition: all .1s linear;
+		}
+
+		.button:after{
+			color:#e9e6e4;
+			content: "";
+			display: block;
+			font-size: 12px;
+			height: 25px;
+			text-decoration: none;
+			text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+			position: absolute;
+			width: 25px;
+		}
+
+		.tick:after{
+			content: "✔";
+			left: 0px;
+			top: 3px;
+		}
+
+		.cross:after{
+			content: "✖";
+			left: 0px;
+			top: 3px;
+		}
+
+		.button:hover{
+			background-image: -webkit-linear-gradient(top, #8FBC8F, #228B22);
+			background-image: linear-gradient(top, #8FBC8F, #228B22);
+			color:#0088cc;
+		}
+
+		.tick:hover:after{
+			color:	#FFA500;
+			text-shadow:0px 0px 6px #83d244;
+		}
+
+		.cross:hover:after{
+			color:#eb2f2f;
+			text-shadow:0px 0px 6px #eb2f2f;
+		}
+
+		.button:active{
+			background-image: -webkit-linear-gradient(top, 	#FFFFF0, #8B8970);
+			background-image: linear-gradient(top, #FFFFF0, #8B8970);
+		}
+
+		.button:active:after{
+			color:#83d244;
+			text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+		}
